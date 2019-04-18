@@ -10,4 +10,5 @@ import java.util.List;
 
 public interface MovieHistoryReponsitory extends PagingAndSortingRepository<MovieHistory, UandM> {
     Page<MovieHistory> findMovieHistorysByUandM(UandM uandM, Pageable pageable);
+    Page<MovieHistory> findMovieHistorysByUandMUserId(Long userId,Pageable pageable);
 }

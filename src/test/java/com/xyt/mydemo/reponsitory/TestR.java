@@ -64,11 +64,11 @@ public class TestR {
     }
     @Test
     public void findMovieHistory(){
-        UandM uandM = new UandM();
-        uandM.setUserId(1L);
-        Page<MovieHistory> page = movieHistoryReponsitory.findMovieHistorysByUandM(uandM,PageRequest.of(0,20));
+//        UandM uandM = new UandM();
+//        uandM.setUserId(1L);
+        Page<MovieHistory> page = movieHistoryReponsitory.findMovieHistorysByUandMUserId(1L,PageRequest.of(0,30));
         for(MovieHistory e:page.getContent()){
-            System.out.println(e.getUandM().getUserId());
+            System.out.println(e.getUandM().getMovieId());
         }
     }
 }
